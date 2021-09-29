@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header />
+  <soapenv:Body>
+    <ns:getPersonRequest xmlns:ns="http://ivoronline.com/soap">
+      <id>1</id>
+    </ns:getPersonRequest>
+  </soapenv:Body>
+</soapenv:Envelope>
+

@@ -2,7 +2,6 @@ package com.ivoronline.springboot_services_soap_server;
 
 import com.ivoronline.soap.GetPersonRequest;
 import com.ivoronline.soap.GetPersonResponse;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,8 +11,12 @@ import org.w3c.dom.Document;
 @RestController
 public class MyController {
 
+  //====================================================================================
+  // GET PERSON
+  //====================================================================================
   @ResponseBody
-  @RequestMapping(value = "GetPerson", produces = {MediaType.APPLICATION_XML_VALUE}) //Force XML response
+  @RequestMapping(value = "GetPerson")                                                 //For SOAPConnection
+  //@RequestMapping(value = "GetPerson", produces = {MediaType.APPLICATION_XML_VALUE}) //For RestTemplate
   String getPerson(@RequestBody String requestSOAP) throws Exception {
 
     //UNMARSHAL REQUEST XML INTO OBJECT

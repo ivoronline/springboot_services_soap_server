@@ -16,10 +16,15 @@ public class UtilSOAP {
   // EXTRACT SOAP BODY
   //=======================================================================================
   public static Document extractSOAPBody(String response) throws Exception {
-    InputStream inputStream = new ByteArrayInputStream(response.getBytes());
-    SOAPMessage responseXML = MessageFactory.newInstance().createMessage(null, inputStream);
+
+    InputStream inputStream      = new ByteArrayInputStream(response.getBytes());
+
+    SOAPMessage responseXML      = MessageFactory.newInstance().createMessage(null, inputStream);
+
     Document    responseDocument = responseXML.getSOAPBody().extractContentAsDocument();
+
     return      responseDocument;
+
   }
 
   //=======================================================================================
